@@ -19,18 +19,9 @@
     content: "";
     position: absolute;
     inset: 0;
-    margin-left: 1.25rem;
+    left: 1.25rem;
     width: 1px;
     background: rgba(255, 255, 255, 0.1);
-}
-
-@media (min-width: 768px) {
-    .timeline::before {
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
-    }
 }
 
 .avatar-frame {
