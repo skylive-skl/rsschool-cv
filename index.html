@@ -123,6 +123,32 @@
                     </li>
                 </ul>
             </section>
+
+            <section id="code-example" class="py-20">
+                <h2 class="text-3xl font-bold text-white mb-8">Code Example</h2>
+
+                <h3 class="text-xl font-semibold text-white mb-2">Two Sum</h3>
+                <pre class="glass-card rounded-xl p-6 overflow-x-auto text-sm text-slate-300 mb-10"><code>function twoSum(nums, target) {
+  const seen = new Map();
+  for (let i = 0; i &lt; nums.length; i++) {
+    const complement = target - nums[i];
+    if (seen.has(complement)) {
+      return [seen.get(complement), i];
+    }
+    seen.set(nums[i], i);
+  }
+  return [];
+}</code></pre>
+
+                <h3 class="text-xl font-semibold text-white mb-2">Debounce</h3>
+                <pre class="glass-card rounded-xl p-6 overflow-x-auto text-sm text-slate-300"><code>function debounce(fn, delay) {
+  let timeoutId;
+  return function (...args) {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() =&gt; fn.apply(this, args), delay);
+  };
+}</code></pre>
+            </section>
         </main>
 
         <footer>footer</footer>
