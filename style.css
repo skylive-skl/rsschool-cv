@@ -32,3 +32,21 @@
         right: 0;
     }
 }
+
+.avatar-frame {
+    width: 9rem;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+.avatar-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (min-width: 768px) {
+    .avatar-frame {
+        width: 12rem;
+    }
+}
