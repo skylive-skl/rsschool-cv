@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ismet Kadyrov | Frontend Team Lead</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0B1120',
+                        darker: '#080d19',
+                        brand: {
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            margin-left: 1.25rem;
+            width: 1px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        @media (min-width: 768px) {
+            .timeline::before {
+                margin-left: auto;
+                margin-right: auto;
+                left: 0;
+                right: 0;
+            }
+        }
+    </style>
+</head>
+<body class="bg-dark text-slate-300 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Background Decoration -->
+    <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-brand-600/20 blur-[120px]"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-indigo-600/20 blur-[120px]"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-card border-b-0 border-white/10 py-4 transition-all">
+        <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-white tracking-wider">IK<span class="text-brand-500">.</span></a>
+            <div class="hidden md:flex gap-8 text-sm font-medium">
+                <a href="#about" class="hover:text-brand-400 transition-colors">Обо мне</a>
+                <a href="#experience" class="hover:text-brand-400 transition-colors">Опыт</a>
+                <a href="#projects" class="hover:text-brand-400 transition-colors">Проекты</a>
+                <a href="#education" class="hover:text-brand-400 transition-colors">Образование</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-6 pt-32 pb-20">
+
+        <!-- Hero Section -->
+        <section id="about" class="min-h-[60vh] flex flex-col justify-center items-start pt-10">
+            <p class="text-brand-400 font-medium mb-4 tracking-wide">Привет, меня зовут</p>
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-4">
+                Исмет Кадыров.
+            </h1>
+            <h2 class="text-4xl md:text-6xl font-bold text-slate-500 mb-8">
+                Я создаю надежные веб-приложения.
+            </h2>
+            <p class="max-w-2xl text-lg text-slate-400 mb-10 leading-relaxed">
+                Я — Software Engineer и Frontend Team Lead. Специализируюсь на проектировании архитектуры и разработке производительных интерфейсов на <span class="text-brand-400">React</span> и <span class="text-brand-400">Vue.js</span>, а также пишу надежный бэкенд с использованием <span class="text-brand-400">NestJS</span> и <span class="text-brand-400">Node.js</span>. Увлекаюсь внедрением AI-решений в продукты.
+            </p>
+            <div class="flex gap-4">
+                <a href="mailto:your.email@example.com" class="px-6 py-3 bg-brand-600 hover:bg-brand-500 text-white font-medium rounded-lg transition-all duration-300 transform hover:-translate-y-1 shadow-lg shadow-brand-500/25">
+                    Связаться со мной
+                </a>
+                <a href="https://github.com/" target="_blank" class="px-6 py-3 glass-card hover:bg-white/5 text-white font-medium rounded-lg transition-all duration-300 transform hover:-translate-y-1">
+                    GitHub Profile
+                </a>
+            </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section class="py-20">
+            <h3 class="text-2xl font-bold text-white mb-8 flex items-center gap-4">
+                <span class="w-8 h-px bg-brand-500"></span>
+                Технологический стек
+            </h3>
+            <div class="flex flex-wrap gap-3">
+                <span class="px-4 py-2 glass-card rounded-full text-sm text-brand-400">JavaScript / TypeScript</span>
+                <span class="px-4 py-2 glass-card rounded-full text-sm text-brand-400">React</span>
+                <span class="px-4 py-2 glass-card rounded-full text-sm text-brand-400">Vue.js</span>
+                <span class="px-4 py-2 glass-card rounded-full text-sm text-indigo-400">Node.js</span>
+                <span class="px-4 py-2 glass-card rounded-full text-sm text-indigo-400">NestJS</span>
+                <span class="px-4 py-2 glass-card rounded-full text-sm text-indigo-400">Prisma ORM</span>
+                <span class="px-4 py-2 glass-card rounded-full text-sm text-indigo-400">PostgreSQL</span>
+                <span class="px-4 py-2 glass-card rounded-full text-sm text-emerald-400">LLMs (Gemini, Claude, Ollama)</span>
+                <span class="px-4 py-2 glass-card rounded-full text-sm text-rose-400">Laravel</span>
+                <span class="px-4 py-2 glass-card rounded-full text-sm text-sky-400">Tailwind CSS</span>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience" class="py-20">
+            <h3 class="text-2xl font-bold text-white mb-12 flex items-center gap-4">
+                <span class="w-8 h-px bg-brand-500"></span>
+                Опыт работы
+            </h3>
+
+            <div class="space-y-8 relative timeline">
+                <!-- Uzum -->
+                <div class="relative pl-12 md:pl-0">
+                    <div class="md:flex items-center justify-between md:flex-row-reverse">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full bg-brand-500/20 text-brand-400 border border-brand-500/50 absolute left-0 md:left-1/2 md:-translate-x-1/2 top-0 z-10">
+                            <span class="text-sm font-bold">1</span>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12 pb-8 md:pb-0">
+                            <div class="glass-card rounded-xl p-6">
+                                <h4 class="text-xl font-bold text-white">Developer</h4>
+                                <div class="text-brand-400 font-semibold mb-2">Uzum</div>
+                                <span class="inline-block text-xs text-slate-400 bg-white/5 px-3 py-1 rounded-full mb-3">Август 2024 — настоящее время</span>
+                                <p class="text-slate-400">Разработка и поддержка ключевых веб-решений, оптимизация производительности, участие в архитектурных решениях.</p>
+                            </div>
+                        </div>
+                        <div class="hidden md:block md:w-1/2"></div>
+                    </div>
+                </div>
+
+                <!-- Trion -->
+                <div class="relative pl-12 md:pl-0">
+                    <div class="md:flex items-center justify-between">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full bg-white/5 text-slate-400 border border-white/10 absolute left-0 md:left-1/2 md:-translate-x-1/2 top-0 z-10">
+                            <span class="text-sm font-bold">2</span>
+                        </div>
+                        <div class="hidden md:block md:w-1/2"></div>
+                        <div class="md:w-1/2 md:pr-12 md:text-right pb-8 md:pb-0">
+                            <div class="glass-card rounded-xl p-6">
+                                <h4 class="text-xl font-bold text-white">Frontend & CRM Manager</h4>
+                                <div class="text-brand-400 font-semibold mb-2">Trion</div>
+                                <p class="text-slate-400">Управление разработкой frontend-приложений и интеграция CRM-систем, контроль качества кода.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Iman -->
+                <div class="relative pl-12 md:pl-0">
+                    <div class="md:flex items-center justify-between md:flex-row-reverse">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full bg-white/5 text-slate-400 border border-white/10 absolute left-0 md:left-1/2 md:-translate-x-1/2 top-0 z-10">
+                            <span class="text-sm font-bold">3</span>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12 pb-8 md:pb-0">
+                            <div class="glass-card rounded-xl p-6">
+                                <h4 class="text-xl font-bold text-white">Frontend Team Lead</h4>
+                                <div class="text-brand-400 font-semibold mb-2">Iman</div>
+                                <p class="text-slate-400">Лидерство в команде фронтенда. Разработка логики на стороне клиента и создание фич бэкенда для маркетплейса на Laravel.</p>
+                            </div>
+                        </div>
+                        <div class="hidden md:block md:w-1/2"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="py-20">
+            <h3 class="text-2xl font-bold text-white mb-12 flex items-center gap-4">
+                <span class="w-8 h-px bg-brand-500"></span>
+                Избранные проекты
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="glass-card rounded-2xl p-8 hover:-translate-y-1 transition-transform duration-300">
+                    <h4 class="text-xl font-bold text-white mb-3">Knowledge Hub AI Integration</h4>
+                    <p class="text-slate-400 mb-6">Расширение API на NestJS. Интеграция с Google Gemini API для автоматического саммари статей, перевода и контент-анализа. Настройка кэширования и rate limiting.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs font-medium px-3 py-1 bg-white/5 rounded-full text-slate-300">NestJS</span>
+                        <span class="text-xs font-medium px-3 py-1 bg-white/5 rounded-full text-slate-300">Gemini API</span>
+                        <span class="text-xs font-medium px-3 py-1 bg-white/5 rounded-full text-slate-300">TypeScript</span>
+                    </div>
+                </div>
+                <div class="glass-card rounded-2xl p-8 hover:-translate-y-1 transition-transform duration-300">
+                    <h4 class="text-xl font-bold text-white mb-3">Music Streaming & Investment App</h4>
+                    <p class="text-slate-400 mb-6">Проектирование и разработка платформы для стриминга музыки с уникальной функцией revenue-sharing для поддержки независимых артистов.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs font-medium px-3 py-1 bg-white/5 rounded-full text-slate-300">React</span>
+                        <span class="text-xs font-medium px-3 py-1 bg-white/5 rounded-full text-slate-300">NestJS</span>
+                        <span class="text-xs font-medium px-3 py-1 bg-white/5 rounded-full text-slate-300">PostgreSQL</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Info -->
+        <section id="education" class="py-20">
+            <h3 class="text-2xl font-bold text-white mb-12 flex items-center gap-4">
+                <span class="w-8 h-px bg-brand-500"></span>
+                Образование
+            </h3>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                    <div class="glass-card rounded-xl p-6">
+                        <h4 class="font-bold text-white">Information Systems and Technologies</h4>
+                        <p class="text-brand-400 text-sm">Swiss International Institute Lausanne (SIIL)</p>
+                    </div>
+                    <div class="glass-card rounded-xl p-6">
+                        <h4 class="font-bold text-white">Frontend & Backend Courses</h4>
+                        <p class="text-brand-400 text-sm">RS School</p>
+                    </div>
+                </div>
+                <div class="glass-card rounded-xl p-6 flex flex-col justify-center space-y-4">
+                    <p class="flex items-center gap-3 text-slate-300">
+                        <span class="text-brand-400">📍</span> Узбекистан (Чирчик / Ташкент)
+                    </p>
+                    <p class="flex items-center gap-3 text-slate-300">
+                        <span class="text-brand-400">🌐</span> Английский (B2)
+                    </p>
+                    <p class="flex items-center gap-3 text-slate-300">
+                        <span class="text-brand-400">💻</span> Готов к remote проектам
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass-card border-t border-white/10 py-12 text-center">
+        <div class="max-w-6xl mx-auto px-6">
+            <h3 class="text-2xl md:text-3xl font-bold text-white mb-8">Let's build something great.</h3>
+            <a href="mailto:your.email@example.com" class="inline-block px-8 py-4 bg-brand-600 hover:bg-brand-500 text-white font-bold rounded-lg transition-colors text-lg">
+                Написать мне
+            </a>
+            <p class="mt-12 text-slate-500 text-sm">
+                &copy; 2026 Ismet Kadyrov. Built with HTML & Tailwind CSS.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
