@@ -1,0 +1,43 @@
+.glass-card {
+    background: rgba(30, 41, 59, 0.4);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.gradient-text {
+    background: linear-gradient(to right, #38bdf8, #818cf8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.timeline {
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    left: 1.25rem;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.avatar-frame {
+    width: 9rem;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+.avatar-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (min-width: 768px) {
+    .avatar-frame {
+        width: 12rem;
+    }
+}
